@@ -1,0 +1,10 @@
+# Maven
+backend/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Local environment
+.env

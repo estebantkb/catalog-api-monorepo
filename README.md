@@ -47,6 +47,31 @@ flowchart LR
 The architecture will evolve as the frontend, backend, database, and
 container configuration are implemented.
 
+## Backend development
+
+The backend is a Java 21 Spring Boot application located in `backend/`.
+It uses Maven, Spring MVC, Spring Data JPA, Lombok, and PostgreSQL. Java 21
+and Maven are required to build and run it.
+
+Start the local PostgreSQL database with Podman:
+
+```bash
+podman compose up -d postgres
+```
+
+Run the backend from the repository root:
+
+```bash
+mvn -f backend/pom.xml spring-boot:run
+```
+
+The health endpoint is available at `http://localhost:8080/api/health`.
+Stop the database when it is no longer needed:
+
+```bash
+podman compose down
+```
+
 ## Development workflow
 
 Work is organized in Jira and delivered through the following branches:
