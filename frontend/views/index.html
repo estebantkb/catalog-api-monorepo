@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-900">
+<main class="mx-auto max-w-6xl px-4 py-8">
+    <header class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">Catalog API</p>
+        <h1 class="text-3xl font-bold">Hardware Catalog</h1>
+        <p class="mt-2 text-slate-600">Search products from the Spring Boot API.</p>
+        <nav class="mt-5 flex flex-wrap gap-3 border-t border-slate-200 pt-4">
+            <a class="inline-block rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700"
+               href="api.html">Rick and Morty Explorer</a>
+        </nav>
+    </header>
+
+    <label class="mb-6 block">
+        <span class="mb-2 block font-semibold">Search products</span>
+        <input id="product-search" class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3"
+               type="search" placeholder="Search by name, brand, or category">
+    </label>
+
+    <p id="catalog-message" class="mb-4 text-slate-600">Loading products...</p>
+    <section id="product-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite"></section>
+</main>
+<dialog id="product-modal" class="w-11/12 max-w-2xl rounded-xl p-0 shadow-xl">
+    <div id="product-modal-content" class="p-6"></div>
+</dialog>
+<script type="module" src="../services/catalog.service.js"></script>
+</body>
+</html>

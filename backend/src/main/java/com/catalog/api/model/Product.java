@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -32,6 +33,11 @@ public class Product {
 
     @NotBlank
     private String category;
+
+    private String description;
+
+    @Column(name = "image_url")
+    private String imageUrl;
 
     @NotNull
     @DecimalMin(value = "0.0")

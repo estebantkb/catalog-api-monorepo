@@ -8,3 +8,6 @@ backend/target/
 
 # Local environment
 .env
+
+# Frontend dependencies
+frontend/node_modules/
