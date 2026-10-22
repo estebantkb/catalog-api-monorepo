@@ -3,6 +3,11 @@ CREATE TABLE IF NOT EXISTS product (
     name VARCHAR(150) NOT NULL,
     brand VARCHAR(100) NOT NULL,
     category VARCHAR(100) NOT NULL,
+    description TEXT,
+    image_url VARCHAR(500),
     price NUMERIC(12, 2) NOT NULL,
     stock INTEGER NOT NULL
 );
+
+ALTER TABLE product ADD COLUMN IF NOT EXISTS description TEXT;
+ALTER TABLE product ADD COLUMN IF NOT EXISTS image_url VARCHAR(500);
