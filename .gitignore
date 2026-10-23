@@ -1,0 +1,13 @@
+# Maven
+backend/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Local environment
+.env
+
+# Frontend dependencies
+frontend/node_modules/
