@@ -162,6 +162,42 @@ selected, the application:
 
 ## Local setup
 
+### Monorepo commands with Nx
+
+Nx coordinates the frontend and backend projects from the repository root.
+Maven remains responsible for compiling, testing, and running the Spring Boot
+backend.
+
+Install the JavaScript workspace dependencies:
+
+```bash
+npm install
+```
+
+Run backend tests through Nx:
+
+```bash
+npm run backend:test
+```
+
+Build the backend:
+
+```bash
+npm run backend:build
+```
+
+Run the backend:
+
+```bash
+npm run backend:run
+```
+
+Serve the frontend on port 5500:
+
+```bash
+npm run frontend:serve
+```
+
 ### 1. Start PostgreSQL with Podman
 
 From the repository root:
