@@ -42,14 +42,26 @@ const filterProducts = (value) => {
 
 const loadProducts = async () => {
     try {
+        console.debug("[catalog] Fetching products:", API_URL);
+
         const response = await fetch(API_URL);
+
+        console.debug("[catalog] Response received:", {
+            status: response.status,
+            ok: response.ok
+        });
+
         if (!response.ok) {
             throw new Error("Could not load products.");
         }
 
         products = await response.json();
+
+        console.debug("[catalog] Products parsed:", products);
+
         renderProducts(products);
     } catch (error) {
+        console.error("[catalog] Product request failed:", error);
         message.text(error.message);
     }
 };
