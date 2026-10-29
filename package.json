@@ -1,0 +1,13 @@
+{
+  "name": "catalog-api-monorepo",
+  "private": true,
+  "scripts": {
+    "backend:build": "nx run backend:build",
+    "backend:test": "nx run backend:test",
+    "backend:run": "nx run backend:run",
+    "frontend:serve": "nx run frontend:serve"
+  },
+  "devDependencies": {
+    "nx": "^21.6.4"
+  }
+}
