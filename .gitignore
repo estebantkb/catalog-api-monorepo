@@ -11,3 +11,7 @@ backend/target/
 
 # Frontend dependencies
 frontend/node_modules/
+
+# Nx
+node_modules/
+.nx/
