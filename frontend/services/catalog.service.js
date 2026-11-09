@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/products";
+const API_URL = "/api/products";
 
 const productGrid = $("#product-grid");
 const message = $("#catalog-message");
